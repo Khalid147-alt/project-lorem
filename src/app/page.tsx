@@ -1,40 +1,124 @@
-'use client'
-import Link from 'next/link';
-import { useState } from 'react';
+import styles from './styles/Navbar.module.css';
+import Image from 'next/image';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+export default function HomePage() {
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <Link href="/">MyLogo</Link>
+    <>
+    <header className={styles.navbar}>
+      <div className={styles.logo}>
+        <Image src="/Group 11.png" alt="Logo" width={40} height={40} />
+        <span className={styles.logoText}>Image Gallery</span>
       </div>
-      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-      </ul>
-      <div className="menu-toggle" onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
-    </nav>
-  );
-};
+      <nav>
+        <ul className={styles.navLinks}>
+          <li className={styles.navItem}>MAIN</li>
+          <li className={styles.navItem}>GALLERY</li>
+          <li className={styles.navItem}>PROJECTS</li>
+          <li className={styles.navItem}>CERTIFICATIONS</li>
+          <li className={styles.navItem}>CONTACTS</li>
+        </ul>
+      </nav>
+      
+    </header>
+     <img
+        src="/Rectangle 6.png" 
+        alt="lorem image"
+        style={{
+        
+          borderRadius: '10px',
+          boxShadow: '0px 4px 8px white',
+          margin: '40px',
+          float:'right',
+  
+             
+        }}
 
-export default Navbar;
+       
+      />
+
+      <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h1 className={styles.projectText}>PROJECT</h1>
+        <h2 className={styles.lorumText}>Lorum</h2>
+      </div>
+      
+    </div>
+    <img
+        src="/Group 13.png" 
+        alt="arrow image"
+        style={{
+        
+          borderRadius: '10px',
+          boxShadow: '0px 4px 8px white',
+          margin: '0px',
+          float:'none',
+  
+             
+        }}
+
+       
+      />
+      <img
+        src="/public\Group 20.png" 
+        alt=""
+        style={{
+        
+          borderRadius: '10px',
+          boxShadow: '0px 4px 8px white',
+          margin: '0px',
+          float:'none',
+  
+             
+        }}
+
+       
+      />
+        <img
+        src="/Group 79.png" 
+        alt=""
+        style={{
+        
+          borderRadius: '10px',
+          boxShadow: '0px 4px 8px white',
+          margin: '0px',
+          float:'none',
+  
+             
+        }}
+
+       
+      />
+       <img
+        src="/Group 82.png" 
+        alt=""
+        style={{
+        
+          borderRadius: '10px',
+          boxShadow: '0px 4px 8px white',
+          margin: '0px',
+          float:'none',
+  
+             
+        }}
+
+       
+      />
+             <img
+        src="/Footer.png" 
+        alt=""
+        style={{
+        
+          borderRadius: '10px',
+          boxShadow: '0px 4px 8px white',
+          margin: '0px',
+          float:'none',
+  
+             
+        }}
+
+       
+      />
+    
+      </>
+  );
+}
